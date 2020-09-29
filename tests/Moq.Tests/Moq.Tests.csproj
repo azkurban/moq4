@@ -41,6 +41,9 @@
 	<ItemGroup Condition=" $([System.Text.RegularExpressions.Regex]::IsMatch('$(DefineConstants)', 'FEATURE_SYSTEM_WINDOWS_FORMS'))">
 		<Reference Include="System.Windows.Forms" />
 	</ItemGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net472' ">
+		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net472" Version="1.0.0" />
+	</ItemGroup>
 	<ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
 		<PackageReference Include="System.Collections.Specialized" Version="4.3.0" />
 		<PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />

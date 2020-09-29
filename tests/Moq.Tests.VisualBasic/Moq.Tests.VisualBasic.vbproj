@@ -15,4 +15,8 @@
 		<ProjectReference Include="..\..\src\Moq\Moq.csproj" />
 	</ItemGroup>
 
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net472' ">
+		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net472" Version="1.0.0" />
+	</ItemGroup>
+
 </Project>

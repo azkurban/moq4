@@ -45,6 +45,10 @@
 		<PackageReference Include="TypeNameFormatter.Sources" Version="1.0.0" PrivateAssets="All" />
 	</ItemGroup>
 
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net45" Version="1.0.0" PrivateAssets="All" />
+	</ItemGroup>
+
 	<ItemGroup>
 		<EmbeddedResource Update="Properties\Resources.resx">
 			<Generator>ResXFileCodeGenerator</Generator>
